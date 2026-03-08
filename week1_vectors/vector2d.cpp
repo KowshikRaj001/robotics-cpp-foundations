@@ -5,7 +5,7 @@ int main() {
     Vector2 a(2,3);
     Vector2 b(4,5);
 
-    Vector2 c = a.add(b);
+    Vector2 c = b.subtract(a);
 
     std::cout << c.x << " " << c.y << std::endl;
 

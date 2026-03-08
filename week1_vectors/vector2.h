@@ -10,8 +10,10 @@ public:
 
     Vector2 add(const Vector2& other);
     Vector2 subtract(const Vector2& other);
+    Vector2 multiply(const Vector2& other);
     double dot(const Vector2& other);
     double magnitude();
+    Vector2 normalize();
 };
 
 #endif
