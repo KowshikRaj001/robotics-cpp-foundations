@@ -117,41 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named robotic_cpp
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+robotic_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robotic_cpp
+.PHONY : robotic_cpp
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+robotic_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/build
+.PHONY : robotic_cpp/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+robotic_cpp/src/Matrix2D.o: robotic_cpp/src/Matrix2D.cpp.o
+.PHONY : robotic_cpp/src/Matrix2D.o
+
+# target to build an object file
+robotic_cpp/src/Matrix2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Matrix2D.cpp.o
+.PHONY : robotic_cpp/src/Matrix2D.cpp.o
+
+robotic_cpp/src/Matrix2D.i: robotic_cpp/src/Matrix2D.cpp.i
+.PHONY : robotic_cpp/src/Matrix2D.i
+
+# target to preprocess a source file
+robotic_cpp/src/Matrix2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Matrix2D.cpp.i
+.PHONY : robotic_cpp/src/Matrix2D.cpp.i
+
+robotic_cpp/src/Matrix2D.s: robotic_cpp/src/Matrix2D.cpp.s
+.PHONY : robotic_cpp/src/Matrix2D.s
+
+# target to generate assembly for a file
+robotic_cpp/src/Matrix2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Matrix2D.cpp.s
+.PHONY : robotic_cpp/src/Matrix2D.cpp.s
+
+robotic_cpp/src/Vector2D.o: robotic_cpp/src/Vector2D.cpp.o
+.PHONY : robotic_cpp/src/Vector2D.o
+
+# target to build an object file
+robotic_cpp/src/Vector2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Vector2D.cpp.o
+.PHONY : robotic_cpp/src/Vector2D.cpp.o
+
+robotic_cpp/src/Vector2D.i: robotic_cpp/src/Vector2D.cpp.i
+.PHONY : robotic_cpp/src/Vector2D.i
+
+# target to preprocess a source file
+robotic_cpp/src/Vector2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Vector2D.cpp.i
+.PHONY : robotic_cpp/src/Vector2D.cpp.i
+
+robotic_cpp/src/Vector2D.s: robotic_cpp/src/Vector2D.cpp.s
+.PHONY : robotic_cpp/src/Vector2D.s
+
+# target to generate assembly for a file
+robotic_cpp/src/Vector2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotic_cpp.dir/build.make CMakeFiles/robotic_cpp.dir/robotic_cpp/src/Vector2D.cpp.s
+.PHONY : robotic_cpp/src/Vector2D.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... robotic_cpp"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... robotic_cpp/src/Matrix2D.o"
+	@echo "... robotic_cpp/src/Matrix2D.i"
+	@echo "... robotic_cpp/src/Matrix2D.s"
+	@echo "... robotic_cpp/src/Vector2D.o"
+	@echo "... robotic_cpp/src/Vector2D.i"
+	@echo "... robotic_cpp/src/Vector2D.s"
 .PHONY : help
 
 
