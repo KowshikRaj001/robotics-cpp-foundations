@@ -29,7 +29,7 @@ int main() {
     Vector2D v(1, 0);
 
     Matrix2D rot = Matrix2D::rotation(3.14159 / 2); // 90 degrees
-
+    
     Vector2D result = rot * v;
 
     std::cout << "Rotated vector: ";
