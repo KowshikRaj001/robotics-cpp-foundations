@@ -1,77 +1,93 @@
-# 🚀 Robotics C++ Fundamentals
+# Robotics C++ Foundations
 
-## 📌 Purpose
-
-This repository is part of my journey to become a **Robotics & Perception Engineer**.
-
-Instead of relying on external libraries, I am building core mathematical and computational components **from scratch** to deeply understand how robotics systems work internally.
-
-This includes:
-
-* Vector mathematics
-* Transformations
-* Geometry
-* Core C++ system design
+A modular C++ implementation of core mathematical primitives used in robotics, including 2D vectors, 2×2 matrices, and rigid body transformations.
 
 ---
 
-## 🎯 Why I Am Doing This
+## 🚀 Overview
 
-Most robotics libraries (Eigen, OpenCV, ROS) provide ready-made functions.
+This project builds the foundational math required for robotics systems such as motion planning, coordinate transformations, and kinematics.
 
-But using them without understanding:
-
-* how vectors work
-* how transformations are applied
-* how memory is managed in C++
-
-leads to shallow knowledge.
-
-This project is focused on:
-
-✔ Building strong fundamentals
-✔ Understanding math behind robotics
-✔ Writing clean and efficient C++ code
-✔ Preparing for real-world robotics systems
+It is designed with clean structure, modularity, and extensibility in mind — similar to real-world robotics software stacks.
 
 ---
 
-## 🧠 What This Project Covers
+## 📦 Features
 
-### ✅ Vector2D Implementation
+### 🔹 Vector2D
 
-* Addition, subtraction
-* Scalar multiplication
-* Dot product
-* Cross product (2D)
-* Magnitude & normalization
+* Basic vector operations (addition, subtraction, scaling)
+* Dot product and cross product
+* Magnitude and normalization
 * Angle between vectors
-* Projection of vectors
-
-### ✅ Advanced C++ Concepts
-
-* Operator overloading
-* Const correctness
-* Header & source file separation
-* CMake build system
-* Exception handling
+* Vector projection
 
 ---
 
-## 🛠️ Tech Stack
+### 🔹 Matrix2D
 
-* C++
-* CMake
-* Linux (Ubuntu)
-* VS Code
+* 2×2 matrix representation
+* Matrix multiplication
+* Matrix-vector multiplication
+* Determinant and inverse
+* Identity matrix
+* Rotation matrix generation
 
 ---
 
-## 🔧 How to Build & Run
+### 🔹 Transform2D
+
+* Combines rotation and translation
+* Applies rigid body transformations
+* Supports transformation composition
+* Core abstraction for coordinate frame manipulation
+
+---
+
+## 🧠 Concepts Covered
+
+* Linear Algebra for Robotics
+* Coordinate Transformations
+* Rotation Matrices
+* Rigid Body Motion (SE(2) basics)
+
+---
+
+## 📁 Project Structure
+
+```
+robotics-cpp-foundations/
+├── include/
+│   ├── Vector2D.h
+│   ├── Matrix2D.h
+│   └── Transform2D.h
+├── src/
+│   ├── Vector2D.cpp
+│   ├── Matrix2D.cpp
+│   └── Transform2D.cpp
+├── main.cpp
+├── CMakeLists.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Build Instructions
+
+### Prerequisites
+
+* C++17 compatible compiler
+* CMake ≥ 3.10
+
+### Build Steps
 
 ```bash
+git clone <your-repo-url>
+cd robotics-cpp-foundations
+
 mkdir build
 cd build
+
 cmake ..
 make
 ./robotics_cpp
@@ -79,59 +95,58 @@ make
 
 ---
 
-## 📂 Project Structure
+## 🧪 Example Output
 
 ```
-robotics_cpp/
- ├── include/
- │    └── Vector2D.h
- ├── src/
- │    └── Vector2D.cpp
- ├── main.cpp
- └── CMakeLists.txt
+Sum: (4, 6)
+Difference: (2, 2)
+Scaled: (6, 8)
+Dot: 11
+Cross: 2
+Magnitude v1: 5
+Angle: 0.179853
+Projection of v1 onto v2: (2.2, 4.4)
+Rotated vector: (0, 1)
+Final transformed point: (2, 4)
 ```
 
 ---
 
-## 🔗 Future Goals
+## 📌 Applications in Robotics
 
-This is not just a standalone project.
+This implementation directly relates to:
 
-It is the foundation for:
-
-* Robot kinematics
-* Coordinate transformations
-* Computer vision geometry
-* ROS-based robotics systems
-* Autonomous robots
-
-Upcoming additions:
-
-* Matrix library (2x2, 3x3)
-* Transform2D (rotation + translation)
-* Camera projection models
-* Integration with ROS2
+* Mobile robot motion modeling
+* Coordinate frame transformations (TF systems in ROS)
+* Robot arm kinematics
+* Sensor data transformations
 
 ---
 
-## 🧭 Long-Term Vision
+## ⚠️ Notes
 
-The goal is to build a **personal robotics math and systems library** that can be used in:
-
-* Simulation environments
-* Real robotic systems
-* Perception pipelines
+* Floating point precision may introduce small numerical errors
+* This project focuses on clarity over optimization
+* Designed as a learning and foundation-building project
 
 ---
 
-## 📌 Note
+## 🔮 Future Improvements
 
-This repository focuses on **learning and understanding**, not replacing existing optimized libraries.
+* Extend to 3D (Vector3D, Matrix3D)
+* Homogeneous transformations
+* Integration with ROS2 (geometry messages)
+* Unit testing (GoogleTest)
 
 ---
 
 ## 👨‍💻 Author
 
-Engineering student focused on Robotics, Computer Vision, and Autonomous Systems.
+Kowshik Raj
+B.Tech AI & ML — Robotics Focus
 
-Building skills through **consistent daily practice and real implementation.
+---
+
+## 📄 License
+
+This project is open-source and available for learning and educational use.
