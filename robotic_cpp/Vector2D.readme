@@ -363,7 +363,18 @@ Output:
 
 ---
 
+## Week 3: Transform2D
+
+Implemented 2D transformation combining rotation and translation.
+
+### Features
+- Apply transformation to points
+- Combine transformations
+- Used for coordinate frame conversions
 # Future Modules in This Series
+
+---
+
 
 This project is part of a **robotics mathematics foundation series**.
 
