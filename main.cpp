@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Vector2D.h"
 #include "Matrix2D.h"
+#include "Transform2D.h"
 
 int main() {
 
@@ -42,6 +43,16 @@ int main() {
 
     std::cout << "Matrix product:\n";
     product.print();
+
+    Vector2D point(1, 0);
+    Vector2D trans(2, 3);
+
+    Transform2D T(rot, trans);
+
+    Vector2D Result = T.apply(point);
+
+    std::cout << "Final transformed point: ";
+    Result.print();
 
     return 0;
 }
